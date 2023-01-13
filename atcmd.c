@@ -69,13 +69,11 @@ static inline uint32_t putparam(char s[], const char *param, bool first)
  * @param	param	파라미터 값	
  * @return	문자열 길이
  */
-#include <stdio.h>
 static inline uint32_t putparam_int(char s[], int64_t param, bool first)
 {
 	uint32_t len = 0;
 
 	s[len++] = first ? '=' : ',';
-	printf ("%d\n\n\n\n", int_to_str(param, s + len));
 	len += int_to_str(param, s + len);
 
 	return len;
