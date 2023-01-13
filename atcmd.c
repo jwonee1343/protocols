@@ -121,7 +121,7 @@ static inline uint32_t putcrlf(char s[])
  * 			%d = 정수, %s = 문자열, %c = 문자 \n
  * 			(예 - "%d%s%c" -> "=정수,문자열,문자")
  * @param	params	파라미터들
- * @return	문자열 길이
+ * @return	문자열 길이. -1 = 에러
  */
 int64_t atcmd_vprintf(char s[], const char *cmd, 
 		const char *restrict fmt, va_list params)
@@ -175,7 +175,7 @@ int64_t atcmd_vprintf(char s[], const char *cmd,
  * 			%d = 정수, %s = 문자열, %c = 문자 \n
  * 			(예 - "%d%s%c" -> "=정수,문자열,문자")
  * @param	...	파라미터들
- * @return	문자열 길이
+ * @return	문자열 길이. -1 = 에러
  */
 int64_t atcmd_printf(char s[], const char *restrict cmd,
 		const char *restrict fmt, ...)
