@@ -1,0 +1,3 @@
+[submodule "ext/string-utils"]
+	path = ext/string-utils
+	url = https://github.com/jwonee1343/string-utils
